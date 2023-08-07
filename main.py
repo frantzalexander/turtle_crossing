@@ -6,7 +6,6 @@ from player import Player
 from car_manager import CarManager
 from scoreboard import Scoreboard
 
-
 #Create game screen
 screen = Screen()
 screen.setup(width=600, height=600)
@@ -16,17 +15,26 @@ screen.tracer(0)
 #Initializing the player turtle
 player_turtle = Player()
 
+car_manager = CarManager()
+
 #Create player interactions
 screen.listen()
 screen.onkey(player_turtle.move_forward, "Up")
-
 
 game_is_on = True
 while game_is_on:
     time.sleep(0.1)
     screen.update()
 
+    car_manager.create_car()
+    car_manager.move_cars()
     
+    #Detect Car Collision
+    for car in car_manager.all_cars:
+        if car.distance(player_turtle) < 20:
+            game_is_on = False
+            
+            
     if player_turtle.ycor() > 290:
         player_turtle.reset_position()
 
