@@ -20,6 +20,14 @@ class Player(Turtle):
         new_y = self.ycor() + MOVE_DISTANCE
         self.goto(self.xcor(), new_y)
 
-    #Define reset position
+    #Set reset position
     def reset_position(self):
         self.goto(STARTING_POSITION)
+    
+    #Detect successful crossing    
+    def is_at_finish_line(self):
+        if self.ycor() > 280:
+            return True
+        
+        else:
+            return False

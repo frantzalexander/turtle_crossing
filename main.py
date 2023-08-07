@@ -12,10 +12,10 @@ screen.setup(width=600, height=600)
 screen.bgcolor("black")
 screen.tracer(0)
 
-#Initializing the player turtle
-player_turtle = Player()
 
+player_turtle = Player()
 car_manager = CarManager()
+scoreboard = Scoreboard()
 
 #Create player interactions
 screen.listen()
@@ -33,10 +33,13 @@ while game_is_on:
     for car in car_manager.all_cars:
         if car.distance(player_turtle) < 20:
             game_is_on = False
+            scoreboard.game_over()
             
-            
-    if player_turtle.ycor() > 290:
+    #Detect a successful Crossing
+    if player_turtle.is_at_finish_line():
         player_turtle.reset_position()
+        car_manager.car_level_up()
+        scoreboard.increase_level()
 
 
 screen.exitonclick()
