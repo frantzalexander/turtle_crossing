@@ -24,15 +24,15 @@ Example Game User Interface
 The project is divided into four modules:
 
 
-Player
+- Player Module
 
-Car Management
-
-
-Scoreboard
+- Car Management Module
 
 
-Main Game
+ - Scoreboard Module
+
+
+ - Main Game Module
 
 ### Flowchart
 ```mermaid
