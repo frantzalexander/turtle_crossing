@@ -38,10 +38,10 @@ Main Game
 ```mermaid
 flowchart TD
 start(((START)))
-player{{Player Module}}
-car{{Car Module}}
-scoreboard{{Scoreboard Module}}
-main_game{{Main Game Module}}
+player{Player Module}
+car{Car Module}
+scoreboard{Scoreboard Module}
+main_game{Main Game Module}
 player_attr[Define: Shape, Colour & Starting Position]
 player_move[Set Player Forward Movement]
 player_reset[Set Player Reset Position]
