@@ -4,13 +4,13 @@
 The player controls a turtle and the goal is to successfully navigate the turtle across the field of cars.
 
 ## Objectives
-- Create the Game Screen
+- Create the game screen
 - Create the player turtle
 - Set up the player turtle with the ability to move forward on the "Up" key press
 - Create the randomly appearing cars
-- Detect Collision with the player turtle
+- Detect collision with the player turtle
 - Detect when the player turtle successfully crosses the game field
-- Create the Scoreboard that updates when the player is successful
+- Create the scoreboard that updates when the player is successful
 - Cars increases speed based on the game level.
 
 ## Results
