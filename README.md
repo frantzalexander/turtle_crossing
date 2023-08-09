@@ -1,4 +1,4 @@
-# Turtle Crossing Game
+# 🐢 Turtle Crossing Game
 
 ## Project Overview
 The player controls a turtle and the goal is to successfully navigate the turtle across the field of cars.
